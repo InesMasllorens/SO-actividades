@@ -106,3 +106,12 @@ C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\EjercicioGuiaSistemasOperativo
 C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\EjercicioGuiaSistemasOperativos-main\EjercicioGuiaSistemasOperativos\clienteEjercicioGuia\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
 C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\EjercicioGuiaSistemasOperativos-main\EjercicioGuiaSistemasOperativos\clienteEjercicioGuia\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\EjercicioGuiaSistemasOperativos-main\EjercicioGuiaSistemasOperativos\clienteEjercicioGuia\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Ines\Documents\UPC 21-22(Q2)\SO\Sesion 4\Ejercicio guia1\clienteEjercicioGuia3\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	//htonl formatea el numero que recibe al formato necesario
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	// establecemos el puerto de escucha
-	serv_adr.sin_port = htons(9050);
+	serv_adr.sin_port = htons(9030);
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Error al bind");
 	
@@ -64,86 +64,47 @@ int main(int argc, char *argv[])
 			// vamos a ver que quieren
 			char *p = strtok( peticion, "/");
 			int codigo =  atoi (p);
+			
 			// Ya tenemos el c?digo de la petici?n
-			char nombre[20];
+			float numero;
 			
 			if (codigo !=0)
 			{
+		
+				
 				p = strtok( NULL, "/");
-
-				strcpy (nombre, p);
-				// Ya tenemos el nombre
-				printf ("Codigo: %d, Nombre: %s\n", codigo, nombre);
+				numero =  atof (p);;
+				// Ya tenemos el numero
+				printf ("Codigo: %d, Numero: %f\n", codigo, numero);
 			}
 			
 			if (codigo ==0) //petici?n de desconexi?n
 				terminar=1;
-			else if (codigo ==1) //piden la longitd del nombre
-				sprintf (respuesta,"%d",strlen (nombre));
-			else if (codigo ==2)
-				// quieren saber si el nombre es bonito
-				if((nombre[0]=='M') || (nombre[0]=='S'))
-				strcpy (respuesta,"SI");
-				else
-					strcpy (respuesta,"NO");
-			else if (codigo ==3) //quiere saber si es alto
+			else if (codigo ==1) //piden pasar de farenheit a celsius
 			{
-				p = strtok( NULL, "/");
-				float altura =  atof (p);
-				if (altura > 1.70)
-					sprintf (respuesta, "%s: eres alto",nombre);
-				else
-					sprintf (respuesta, "%s: eresbajo",nombre);
+				float gradosC = 0.0;
+				gradosC = (5.0/9.0)*(numero-32);
+				sprintf (respuesta,"En grados celsius es %f:",gradosC);
 			}
 			
-			else if (codigo == 5) //es palindromo
+			else if (codigo ==2) //piden pasar de celsius a farenheit
 			{
-				
-				int n_i, n_f;
-				
-				n_i = 0;
-				n_f = strlen(nombre)-1;
-				
-				while(n_i<n_f && nombre[n_i] == nombre[n_f])
-				{
-					n_i++;
-					n_f--;
-				}
-				
-				if(n_i>=n_f) //es palindroma
-				{
-					sprintf (respuesta, "%s: Tu nombre es palindromo",nombre);
-				}
-				
-				else
-				{
-					sprintf (respuesta, "%s: Tu nombre NO es palindromo",nombre);
-				}
+				float gradosF = 0.0;
+				gradosF = (numero/(5.0/9.0)) + 32;
+				sprintf (respuesta,"En grados farenheit es %f:",gradosF);
 			}
-			else if (codigo == 6) //pasar de minusculas a mayusculas
-			{
-				int i;
-				int t = strlen(nombre);
-				for(i=0; i<t; i++)
-				{
-					nombre[i] = toupper(nombre[i]);
+
+					
+					if (codigo !=0)
+					{
+						
+						printf ("Respuesta: %s\n", respuesta);
+						// Enviamos respuesta
+						write (sock_conn,respuesta, strlen(respuesta));
+					}
 				}
-				sprintf(respuesta,"%s", nombre);
-				
-				
-			
-				
-			}
-				
-			if (codigo !=0)
-			{
-				
-				printf ("Respuesta: %s\n", respuesta);
-				// Enviamos respuesta
-				write (sock_conn,respuesta, strlen(respuesta));
-			}
+				// Se acabo el servicio para este cliente
+				close(sock_conn); 
 		}
-		// Se acabo el servicio para este cliente
-		close(sock_conn); 
 	}
-}
+
